@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Teste juros compostos</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Ciclic</h1>
+        </header>
+        <form action="#">
+            <h2>Simulador</h2>
+            <div>
+                <label>
+                    Nome
+                </label>
+                <input type="text" id="name">
+            </div>
+            <div>
+                <label>
+                    Mensalidade
+                </label>
+                <input type="text" id="monthyFees">
+            </div>
+            <div>
+                <label>
+                    Taxa de juros
+                </label>
+                <input type="text" id="interestRates">
+            </div>
+            <div>
+                <label>
+                    Tempo
+                </label>
+                <select name="tempo" id="time">
+                    <option value="">-----</option>
+                    <option value="1">1 ano</option>
+                    <option value="2">2 ano</option>
+                    <option value="3">3 ano</option>
+                </select>
+            </div>
+            <button type="submit">Simular</button>
+        </form>
+    </main>
+    <footer>
+        <script src="javascript/main.js"></script>
+    </footer>
+</body>
+</html>
