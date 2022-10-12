@@ -15,7 +15,7 @@ body{
 }
 main{
     max-width: 370px;
-    max-height: 420px;
+    max-height: 480px;
     padding: 12px;
     background-color: grey;
 }
@@ -40,6 +40,16 @@ main form h2{
     width: 100%;
     text-align: left;
 }
+main form .erroMensage{
+    color: red;
+    width: 100%;
+    text-align: center;
+    padding: 3px;
+    font-size: 0.8rem;
+}
+main form .hidden{
+    display: none;
+}
 main form div{
     display: flex;
     margin-bottom: 10px;
@@ -52,12 +62,25 @@ main form div label{
     font-size: 1.2rem;
     background-color: cadetblue;
 }
+main form div input.border,
+main form div select.border{
+    border: 1px solid red;
+}
+main form div input::-webkit-outer-spin-button,
+main form div input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+main form div input[type=number] {
+    -moz-appearance: textfield;
+}
 main form div input,
 main form div select{
     border: none;
     font-size: 1.2rem;
     width: 200px;
     padding: 5px;
+    outline: none;
 }
 main form button,
 main .resultado button{

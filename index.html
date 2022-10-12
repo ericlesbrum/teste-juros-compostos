@@ -14,24 +14,28 @@
         </header>
         <form id="formCiclic">
             <h2>Simulador</h2>
+            <label class="erroMensage hidden">Digite o nome corretamente</label>
             <div>
                 <label>
                     Nome
                 </label>
                 <input type="text" id="name">
             </div>
+            <label class="erroMensage hidden">Digite o valor da mensalidade corretamente</label>
             <div>
                 <label>
                     Mensalidade
                 </label>
-                <input type="text" id="monthyFees">
+                <input type="number" id="monthyFees" min="0.01">
             </div>
+            <label class="erroMensage hidden">Digite o valor da taxa de juros corretamente</label>
             <div>
                 <label>
                     Taxa de juros
                 </label>
-                <input type="text" id="interestRates">
+                <input type="number" id="interestRates" min="0.01">
             </div>
+            <label class="erroMensage hidden">Digite o tempo de contribuição corretamente</label>
             <div>
                 <label>
                     Tempo
