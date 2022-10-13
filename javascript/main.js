@@ -30,11 +30,11 @@ const Main={
         return `
         <div class="resultado">
             <article>
-                <h2>Olá ${this.$name.value}!</h2>
+                <h2>Olá <span>${this.$name.value}</span>!</h2>
                 <p>
-                    Juntando R$ ${this.$monthyFees.value} todo mês, 
-                    você terá R$ ${result} em ${this.$time.value} anos
-                    sob uma taxa de juros de ${this.$interestRates.value}% ao mês.
+                    Juntando <span>R$ ${this.$monthyFees.value}</span> todo mês, 
+                    você terá <span>R$ ${result}</span> em <span>${this.$time.value} anos</span>
+                    sob uma taxa de juros de <span>${this.$interestRates.value}%</span> ao mês.
                 </p>
             </article>
             <button onClick="window.location.reload()">Simular Novamente</button>
@@ -64,42 +64,42 @@ const Main={
             if(this.$name.value=="")
             {
                 this.$errorMensages[0].classList.remove("hidden");
-                this.$name.classList.add("border");
+                this.$name.parentElement.classList.add("border");
                 missingInput=true;
             }
             else{
                 this.$errorMensages[0].classList.add("hidden");
-                this.$name.classList.remove("border");
+                this.$name.parentElement.classList.remove("border");
             }
             if(this.$monthyFees.value=="")
             {
                 this.$errorMensages[1].classList.remove("hidden");
-                this.$monthyFees.classList.add("border");
+                this.$monthyFees.parentElement.classList.add("border");
                 missingInput=true;
             }
             else{
                 this.$errorMensages[1].classList.add("hidden");
-                this.$monthyFees.classList.remove("border");
+                this.$monthyFees.parentElement.classList.remove("border");
             }
             if(this.$interestRates.value=="")
             {
                 this.$errorMensages[2].classList.remove("hidden");
-                this.$interestRates.classList.add("border");
+                this.$interestRates.parentElement.classList.add("border");
                 missingInput=true;
             }
             else{
                 this.$errorMensages[2].classList.add("hidden");
-                this.$interestRates.classList.remove("border");
+                this.$interestRates.parentElement.classList.remove("border");
             }
             if(this.$time.value=="")
             {
                 this.$errorMensages[3].classList.remove("hidden");
-                this.$time.classList.add("border");
+                this.$time.parentElement.classList.add("border");
                 missingInput=true;
             }
             else{
                 this.$errorMensages[3].classList.add("hidden");
-                this.$time.classList.remove("border");
+                this.$time.parentElement.classList.remove("border");
             }
             if(missingInput)
                 return;

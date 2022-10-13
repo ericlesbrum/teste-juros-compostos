@@ -1,3 +1,12 @@
+:root{
+    --Orange:hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Medium-Grey: hsl(216, 12%, 54%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Dark-Blue-Light: hsl(213, 19%, 25%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
 *{
     margin: 0;
     padding: 0;
@@ -8,22 +17,23 @@ body{
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
+    background-color: var(--Very-Dark-Blue);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 main{
-    max-width: 370px;
-    max-height: 480px;
-    padding: 12px;
-    background-color: grey;
+    border-radius: 12px;
+    max-width: 400px;
+    max-height: 550px;
+    padding: 20px;
+    background-color: var(--Dark-Blue);
 }
 main header{
-    background-color: aquamarine;
+    color: var(--Orange);
     width: 100%;
     text-align: center;
-    border: 1px solid black;
 }
 main header h1{
     font-size: 3.5rem;
@@ -38,6 +48,9 @@ main form{
 }
 main form h2{
     width: 100%;
+    font-size: 1.8rem;
+    color: var(--White);
+    margin-bottom: 20px;
     text-align: left;
 }
 main form .erroMensage{
@@ -45,7 +58,7 @@ main form .erroMensage{
     width: 100%;
     text-align: center;
     padding: 3px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 main form .hidden{
     display: none;
@@ -59,11 +72,11 @@ main form div{
 main form div label{
     width: 130px;
     padding: 5px;
-    font-size: 1.2rem;
-    background-color: cadetblue;
+    font-size: 1.1rem;
+    color: var(--Light-Grey);
 }
-main form div input.border,
-main form div select.border{
+main form div.border {
+    border-radius: 8px;
     border: 1px solid red;
 }
 main form div input::-webkit-outer-spin-button,
@@ -80,24 +93,31 @@ main form div select{
     font-size: 1.2rem;
     width: 200px;
     padding: 5px;
+    color: var(--Medium-Grey);
     outline: none;
+    border-radius: 8px;
+    background-color: var(--Dark-Blue-Light);
 }
 main form button,
 main .resultado button{
     margin-top: 10px;
     border: none;
     outline: none;
-    background-color: white;
+    background-color: var(--Orange);
+    font-size: 1.2rem;
+    font-weight: 700;
     border-radius: 4px;
     padding: 10px;
-    width: 200px;
+    width: 300px;
+    color: var(--White);
+    border-radius: 20px;
     transition: 0.5s;
 }
 main form button:hover,
 main .resultado button:hover{
     cursor: pointer;
-    background-color: black;
-    color: white;
+    background-color: var(--White);
+    color:var(--Orange);
 }
 main .resultado{
     display: flex;
@@ -110,4 +130,16 @@ main .resultado{
 main .resultado article{
     font-size: 1.1rem;
     padding: 20px;
+}
+main .resultado article h2{
+    color: var(--White);
+    margin-bottom: 20px;
+}
+main .resultado article p{
+    color: var(--Light-Grey);
+    font-size: 1.1rem;
+}
+main .resultado article p span{
+    color: var(--White);
+    font-size: 1.2rem;
 }
